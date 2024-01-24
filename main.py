@@ -11,9 +11,19 @@ app.include_router(crud.router)
 Test GET endpoint.
 """
 
+
 @app.get("/")
 async def index():
     return {"message": "Hi Weslee 🤓"}
+
+
+
+
+
+
+
+
+
 
 @app.on_event('startup')
 def init_db():

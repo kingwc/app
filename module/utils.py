@@ -6,8 +6,8 @@ from .schemas import UserCreate, GameCreate
 """
 Find user from database using epic_id as query parameter.
 """
-def user_by_epic_id(id: str, db: Session):
-    db_user = db.query(User).filter(User.epic_id == id).first()
+def user_by_epic_id(epic_id: str, db: Session):
+    db_user = db.query(User).filter(User.epic_id == epic_id).first()
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
     return db_user

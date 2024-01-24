@@ -28,7 +28,7 @@ class UserGet(UserBase):
     email: str
     hours_played: int
     is_banned: bool
-    games_played: int
+    games_played_count: int
     pfp_link: str
 
     class Config:
